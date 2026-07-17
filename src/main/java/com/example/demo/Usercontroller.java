@@ -22,18 +22,18 @@ public class Usercontroller {
     }
 
     @GetMapping("/users/{id}")
-    public User getUserById(@PathVariable int id) {
+    public User getUserById(@PathVariable Integer id) {
         return userService.getUserById(id);
     }
 
     @PutMapping("/users/{id}")
-    public User updateUser(@PathVariable int id,
+    public User updateUser(@PathVariable Integer id,
                            @RequestBody User updatedUser) {
         return userService.updateUser(id, updatedUser);
     }
 
     @DeleteMapping("/users/{id}")
-    public String deleteUser(@PathVariable int id) {
+    public String deleteUser(@PathVariable Integer id) {
         return userService.deleteUser(id);
     }
 }

@@ -22,12 +22,12 @@ public class UserService {
     }
 
     // Read One
-    public User getUserById(int id) {
+    public User getUserById(Integer id) {
         return userRepository.findById(id).orElse(null);
     }
 
     // Update
-    public User updateUser(int id, User updatedUser) {
+    public User updateUser(Integer id, User updatedUser) {
 
         User user = userRepository.findById(id).orElse(null);
 
@@ -44,7 +44,7 @@ public class UserService {
     }
 
     // Delete
-    public String deleteUser(int id) {
+    public String deleteUser(Integer id) {
 
         if (userRepository.existsById(id)) {
             userRepository.deleteById(id);
